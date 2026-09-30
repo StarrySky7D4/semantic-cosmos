@@ -1,0 +1,4 @@
+node_modules/
+verification/browser-downloads/
+wasm-core/target/
+dist/
