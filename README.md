@@ -2,7 +2,23 @@
 
 这是一个可部署到 GitHub Pages 的本地语义工作区。随包提供完整前端源码、Rust 数值核心源码、编译好的 WASM、中文 ONNX 模型、原始新闻 JSON、512 维真实向量和静态构建产物。没有远程计算服务或 API 密钥。
 
+## 在线展示
+
+https://starrysky7d4.github.io/semantic-cosmos/
+
+`main` 分支更新会自动运行测试、构建并部署至 GitHub Pages。
+
 ## 立即运行
+
+从 GitHub 克隆或下载源码后，先执行以下命令生成 `dist/`：
+
+```sh
+npm ci
+npm run build
+npm run serve
+```
+
+`dist/` 是构建产物，不提交到源码仓库；完整离线发布包则包含预构建的 `dist/`。
 
 直接打开 `dist/news-cosmos.html`，可以查看新闻、旋转缩放、搜索、调整参数、在真正的 WASM 核心中重建层级和关系，以及导入/导出带向量的 JSON。这个单文件已经嵌入原文、默认向量、图谱 Worker 与计算 WASM。
 
@@ -104,7 +120,7 @@ npm run test:browser
 
 ## 验证与文件位置
 
-`verification/results.json` 保存最后一次端到端结果，包含实际浏览器推理、预计算/重算一致性、WASM 重建、JSON 往返、快照恢复、嵌入检查点、离线重新加载和手机布局检查。截图位于同目录；`tests/core.test.mjs` 包含已知向量平均连接、边分数和图谱结构检查。
+完整离线发布包中的 `verification/results.json` 保存端到端结果，包含实际浏览器推理、预计算/重算一致性、WASM 重建、JSON 往返、快照恢复、嵌入检查点、离线重新加载和手机布局检查。截图位于发布包同目录，源码仓库不包含这些历史截图；`tests/core.test.mjs` 包含已知向量平均连接、边分数和图谱结构检查。
 
 数值核心在 `wasm-core/src/lib.rs`，构图在 `src/core.js` 与 `src/graph.worker.js`。球心拟合与亲和度定位在 Worker 内的 `src/space.js` 中执行，Canvas 负责显示；这部分是 JavaScript。模型 Worker 在 `src/inference.worker.js`，本地保存位于 `src/storage.js`。
 
