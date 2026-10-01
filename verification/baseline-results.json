@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "initial": {
+    "records": 29,
+    "roots": 4,
+    "topics": 21,
+    "wormholes": 1,
+    "runtime": "rust-wasm",
+    "names": [
+      "旗舰降价与分层产品线",
+      "网络安全能力与失控 agent",
+      "注意力与低成本预训练",
+      "发布节奏压缩"
+    ]
+  },
+  "maxReferenceBrowserCosineDeviation": 9.468217727626183e-7,
+  "externalNetworkRequests": 0,
+  "checks": [
+    "independent topic centres and local balls",
+    "density control tightens neighbourhoods",
+    "outliers remain far from topics",
+    "worm length controls and collapsed drawing",
+    "imported long edges removed and short edges hidden when collapsed",
+    "real ONNX/WASM browser inference",
+    "Rust/WASM graph reconstruction",
+    "embedding checkpoint reuse",
+    "local snapshot save/restore",
+    "JSON graph roundtrip",
+    "invalid vectors rejected",
+    "news IDs and source links preserved",
+    "date filtering",
+    "mobile layouts",
+    "service-worker offline reload and model cache",
+    "offline HTML WASM reconstruction",
+    "no runtime errors"
+  ]
+}

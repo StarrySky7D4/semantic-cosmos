@@ -1,0 +1,402 @@
+{
+  "status": "PASS",
+  "baselineCommit": "3fe71bd",
+  "synthetic": false,
+  "checks": [
+    "73 real records: aligned vectors, pairwise cosine, finite coordinates and same camera/scale; hardware GPU queue submissions",
+    "old runtime row cache invalidated; warm caches exact; appended and duplicate input preserves previous vectors",
+    "fixed real GPU graph: vendor search navigation, source satellite, dates/evidence/limitations/detail"
+  ],
+  "browser": "154.0.4258.37",
+  "gpuDevices": [
+    {
+      "vendorId": 4318,
+      "deviceId": 10114,
+      "subSysId": 397349086,
+      "revision": 161,
+      "vendorString": "",
+      "deviceString": "NVIDIA GeForce RTX 4070 Ti",
+      "driverVendor": "NVIDIA",
+      "driverVersion": "32.0.15.8157"
+    },
+    {
+      "vendorId": 5140,
+      "deviceId": 140,
+      "subSysId": 0,
+      "revision": 0,
+      "vendorString": "",
+      "deviceString": "Microsoft Basic Render Driver",
+      "driverVendor": "",
+      "driverVersion": "10.0.26100.9278"
+    }
+  ],
+  "webgpuStatus": "enabled",
+  "records": 73,
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "isFallbackAdapter": false,
+    "features": [
+      "depth32float-stencil8",
+      "rg11b10ufloat-renderable",
+      "bgra8unorm-storage",
+      "texture-formats-tier1",
+      "texture-compression-bc",
+      "dual-source-blending",
+      "core-features-and-limits",
+      "float32-filterable",
+      "indirect-first-instance",
+      "float32-blendable",
+      "subgroup-size-control",
+      "depth-clip-control",
+      "texture-compression-bc-sliced-3d",
+      "clip-distances",
+      "shader-f16",
+      "timestamp-query",
+      "texture-formats-tier2",
+      "primitive-index",
+      "texture-component-swizzle",
+      "subgroups"
+    ]
+  },
+  "before": {
+    "wasm": {
+      "embedding": {
+        "model": "Xenova/bge-small-zh-v1.5",
+        "revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+        "weightDtype": "q8",
+        "vectorDtype": "fp32",
+        "pooling": "cls",
+        "dimension": 512,
+        "normalize": true,
+        "maxTokens": 512,
+        "inputTemplate": "title + 。 + summary",
+        "inputSha256": "d7c9a8cd29fef7ce2b2eb37c7296595b95b8e71f3c96fd45d979bd2f995a4139",
+        "backend": "wasm",
+        "generatedAt": "2026-10-01T00:37:30.998Z",
+        "durationMs": 4442.399999976158,
+        "reusedRows": 0,
+        "computedRows": 79,
+        "uniqueInputs": 79,
+        "gpuCommandSubmissions": 0
+      },
+      "pairCosine": {
+        "min": 0.3763602917742127,
+        "median": 0.570059856891033,
+        "max": 0.8281524700624409,
+        "mean": 0.5715639506587032
+      },
+      "norm": {
+        "min": 0.9999995638000017,
+        "median": 0.9999999985932557,
+        "max": 1.0000004734107748,
+        "mean": 0.9999999977807481
+      },
+      "nodes": 123,
+      "roots": [
+        34,
+        15,
+        4,
+        20
+      ],
+      "radius": {
+        "min": 40.8334202405769,
+        "median": 88.04087249384888,
+        "max": 111.37811173103525,
+        "mean": 85.16811860407942
+      },
+      "axes": [
+        {
+          "min": -97.39045544677555,
+          "median": 3.9369199130005974,
+          "max": 86.72859997190342,
+          "mean": 1.961559822199828
+        },
+        {
+          "min": -100.7315135175728,
+          "median": -1.637273373161432,
+          "max": 98.24862159388415,
+          "mean": -3.646289125409836
+        },
+        {
+          "min": -92.33919700422821,
+          "median": -0.40671404873190964,
+          "max": 96.44232970739122,
+          "mean": 2.482091002058883
+        }
+      ],
+      "camera": {
+        "yaw": -0.38,
+        "pitch": 0.24,
+        "zoom": 1.44,
+        "focus": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "webgpu": {
+      "embedding": {
+        "model": "Xenova/bge-small-zh-v1.5",
+        "revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+        "weightDtype": "q8",
+        "vectorDtype": "fp32",
+        "pooling": "cls",
+        "dimension": 512,
+        "normalize": true,
+        "maxTokens": 512,
+        "inputTemplate": "title + 。 + summary",
+        "inputSha256": "4a467a5cb4d9bde1301ece03c9a027e00f9dbb896f934782e652191564bdaad8",
+        "backend": "webgpu",
+        "generatedAt": "2026-10-01T00:37:38.395Z",
+        "durationMs": 5715.199999988079,
+        "reusedRows": 0,
+        "computedRows": 79,
+        "uniqueInputs": 79,
+        "gpuCommandSubmissions": 1379
+      },
+      "pairCosine": {
+        "min": 0.42420757309337787,
+        "median": 0.7597976804700665,
+        "max": 1.000000612817629,
+        "mean": 0.7374325086398575
+      },
+      "norm": {
+        "min": 0.999999623681025,
+        "median": 1.0000000548236032,
+        "max": 1.000000464995045,
+        "mean": 1.000000036546921
+      },
+      "nodes": 81,
+      "roots": [
+        22,
+        9,
+        39,
+        3
+      ],
+      "radius": {
+        "min": 34.36818434887494,
+        "median": 41.646492842997034,
+        "max": 102.48434202028584,
+        "mean": 49.60811268369045
+      },
+      "axes": [
+        {
+          "min": -69.90889419244843,
+          "median": 29.841904152920417,
+          "max": 40.986723402764916,
+          "mean": 18.109618719322416
+        },
+        {
+          "min": -52.24300730863798,
+          "median": -16.497085263675658,
+          "max": 54.1414471000763,
+          "mean": -2.539896148050368
+        },
+        {
+          "min": -45.451426026712724,
+          "median": -6.353924722371195,
+          "max": 56.96208934015861,
+          "mean": -7.394616129784741
+        }
+      ],
+      "camera": {
+        "yaw": -0.38,
+        "pitch": 0.24,
+        "zoom": 1.44,
+        "focus": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "alignedCosine": {
+      "min": 0.2605381967392415,
+      "median": 0.3644947239454367,
+      "max": 0.45260746461860263,
+      "mean": 0.3657119567958701
+    }
+  },
+  "after": {
+    "wasm": {
+      "embedding": {
+        "runtime": "onnxruntime-web/1.30.0",
+        "inferenceSchema": 2,
+        "batchSize": 1,
+        "gpuAdapter": null,
+        "model": "Xenova/bge-small-zh-v1.5",
+        "revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+        "weightDtype": "q8",
+        "vectorDtype": "fp32",
+        "pooling": "cls",
+        "dimension": 512,
+        "normalize": true,
+        "maxTokens": 512,
+        "inputTemplate": "title + 。 + summary",
+        "inputSha256": "b6fa4aa2fac6a6d45548e70b414d5f2aaf26969faa80f64e6ae53c1ddb010b04",
+        "backend": "wasm",
+        "generatedAt": "2026-10-01T00:37:44.026Z",
+        "durationMs": 3628.699999988079,
+        "reusedRows": 0,
+        "computedRows": 79,
+        "uniqueInputs": 79,
+        "gpuCommandSubmissions": 0
+      },
+      "pairCosine": {
+        "min": 0.3830526136078038,
+        "median": 0.5707708841023902,
+        "max": 0.8120834738792377,
+        "mean": 0.571870172536145
+      },
+      "norm": {
+        "min": 0.9999995555265702,
+        "median": 0.99999998293334,
+        "max": 1.0000004350633602,
+        "mean": 0.9999999853851009
+      },
+      "nodes": 121,
+      "roots": [
+        34,
+        16,
+        5,
+        18
+      ],
+      "radius": {
+        "min": 59.252719489699096,
+        "median": 86.6445107890075,
+        "max": 115.984377361356,
+        "mean": 85.51511528299116
+      },
+      "axes": [
+        {
+          "min": -98.43675239960108,
+          "median": -1.5855538462292547,
+          "max": 103.3135405744219,
+          "mean": -2.5559643471453106
+        },
+        {
+          "min": -81.33720422815047,
+          "median": -1.9743731248109366,
+          "max": 81.16862557065183,
+          "mean": 2.6193810146541714
+        },
+        {
+          "min": -109.01889482914986,
+          "median": -2.3960401602547488,
+          "max": 97.42940838335139,
+          "mean": 1.8088008624168708
+        }
+      ],
+      "camera": {
+        "yaw": -0.38,
+        "pitch": 0.24,
+        "zoom": 1.44,
+        "focus": [
+          0,
+          0,
+          0
+        ]
+      },
+      "warmMs": 22.30000001192093
+    },
+    "webgpu": {
+      "embedding": {
+        "runtime": "onnxruntime-web/1.30.0",
+        "inferenceSchema": 2,
+        "batchSize": 1,
+        "gpuAdapter": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "isFallbackAdapter": false
+        },
+        "model": "Xenova/bge-small-zh-v1.5",
+        "revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+        "weightDtype": "q8",
+        "vectorDtype": "fp32",
+        "pooling": "cls",
+        "dimension": 512,
+        "normalize": true,
+        "maxTokens": 512,
+        "inputTemplate": "title + 。 + summary",
+        "inputSha256": "849f9308eb69264fc09cf29c9411524242b4b2ab388cb2c3302f38eaba92882f",
+        "backend": "webgpu",
+        "generatedAt": "2026-10-01T00:37:54.261Z",
+        "durationMs": 8592.800000011921,
+        "reusedRows": 0,
+        "computedRows": 79,
+        "uniqueInputs": 79,
+        "gpuCommandSubmissions": 4897
+      },
+      "pairCosine": {
+        "min": 0.38323729373293725,
+        "median": 0.5707896207375087,
+        "max": 0.8126302305190507,
+        "mean": 0.5719313685869044
+      },
+      "norm": {
+        "min": 0.9999995145858447,
+        "median": 0.9999999906328926,
+        "max": 1.000000463865835,
+        "mean": 0.9999999952953154
+      },
+      "nodes": 125,
+      "roots": [
+        25,
+        16,
+        14,
+        18
+      ],
+      "radius": {
+        "min": 63.27497644819026,
+        "median": 88.76405398626792,
+        "max": 110.76297404716902,
+        "mean": 88.963159337633
+      },
+      "axes": [
+        {
+          "min": -91.514527647225,
+          "median": -8.873762129328838,
+          "max": 109.8250527996922,
+          "mean": -6.638099510016629
+        },
+        {
+          "min": -97.27371576275372,
+          "median": -8.239327063408307,
+          "max": 81.84154536951073,
+          "mean": 0.565221634829006
+        },
+        {
+          "min": -93.29088248916969,
+          "median": 0.10589462544905359,
+          "max": 94.0002267794533,
+          "mean": -0.49608710026457636
+        }
+      ],
+      "camera": {
+        "yaw": -0.38,
+        "pitch": 0.24,
+        "zoom": 1.44,
+        "focus": [
+          0,
+          0,
+          0
+        ]
+      },
+      "warmMs": 53
+    },
+    "alignedCosine": {
+      "min": 0.9956418441603501,
+      "median": 0.9988745361552865,
+      "max": 1.0000004840835377,
+      "mean": 0.9985361900480478
+    },
+    "pairCosineDifference": {
+      "min": 4.495421757066964e-9,
+      "median": 0.0023768786764101213,
+      "max": 0.02001434923672779,
+      "mean": 0.003238614835679382
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "resolved": true,
+  "affectedCommand": "node --test tests/core.test.mjs tests/hierarchy.test.mjs",
+  "affectedTest": "frontier respects budgets, zoom, filters and prioritizes any searched document",
+  "relatedStructuralFailure": "10k synthetic hierarchy preserves documents, caps local work and never allocates a global pair matrix",
+  "initialToolSessions": [15939, 86874],
+  "initialOsPid": null,
+  "initialOsPidLimitation": "Windows process enumeration was denied; no OS PID was inferred or invented.",
+  "rootCause": "Leaf ID reused its parent semantic path. Map construction overwrote the parent with the leaf, making parent traversal a self-cycle.",
+  "fix": "Distinct /system leaf ID, parent-child reference regression and reserved visible roots.",
+  "cleanup": "Interrupted only the two owned test sessions. No unrelated process or Morrow process was stopped.",
+  "timeoutPolicy": "10 seconds per test plus a separate 30-second watchdog in scripts/run-tests.mjs; test-isolation=none keeps all unit tests in exactly one known child process.",
+  "verification": "17 tests pass; a 200 ms synchronous-block watchdog probe is provided and was run."
+}

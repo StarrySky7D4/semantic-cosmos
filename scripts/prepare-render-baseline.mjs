@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {build} from 'esbuild';
+import {constructHierarchy} from '../src/hierarchy.js';
+import {synthetic} from './benchmark.mjs';
+import {DEFAULT_PARAMETERS} from '../src/adapters.js';
+const dir='verification/render-baseline';fs.mkdirSync(dir+'/src',{recursive:true});fs.mkdirSync(dir+'/assets',{recursive:true});
+const files=execFileSync('git',['ls-tree','-r','--name-only','90fe59c','src'],{encoding:'utf8'}).trim().split(/\r?\n/);
+for(const file of files)fs.writeFileSync(dir+'/'+file,execFileSync('git',['show','90fe59c:'+file]));
+let app=fs.readFileSync(dir+'/src/app.js','utf8').replace(/\r\n/g,'\n');app=app.replace('let W=0','let lastDrawDuration=0;\nlet W=0').replace('needsDraw=false;ctx.setTransform','needsDraw=false;const drawStarted=performance.now();ctx.setTransform');const end=app.indexOf('\n}\nfunction drawTopicSpheres');app=app.slice(0,end)+'\n lastDrawDuration=performance.now()-drawStarted;'+app.slice(end);app=app.replace('computeGraph,exportableUniverse,readNpy','computeGraph,exportableUniverse,readNpy,get counters(){return {drawDurationMs:lastDrawDuration};}');fs.writeFileSync(dir+'/src/app.js',app);
+const common={bundle:true,minify:true,target:'es2022',platform:'browser',logLevel:'silent'};
+await build({...common,entryPoints:[dir+'/src/app.js'],format:'esm',outfile:dir+'/assets/app.js'});const worker=await build({...common,entryPoints:[dir+'/src/graph.worker.js'],format:'iife',write:false});
+const safe=x=>JSON.stringify(x).replace(/</g,'\\u003c'),data=JSON.parse(fs.readFileSync('public/data/news-vectors.json')),wasm=fs.readFileSync('public/wasm/cosmos_core.wasm').toString('base64');const html=fs.readFileSync(dir+'/src/index.html','utf8').replace('<script type="module" src="./assets/app.js"></script>','<script>window.COSMOS_DATA='+safe(data)+';window.COSMOS_WASM='+safe(wasm)+';window.COSMOS_GRAPH_WORKER='+safe(worker.outputFiles[0].text)+';</script><script type="module" src="./assets/app.js"></script>');fs.writeFileSync(dir+'/index.html',html);
+const graph=constructHierarchy(synthetic(1000),DEFAULT_PARAMETERS);fs.writeFileSync('verification/render-fixture.json',JSON.stringify(graph));console.log('Prepared original v0.4.0 renderer and identical 1000-row synthetic snapshot.');

@@ -1,0 +1,75 @@
+{
+  "fixture": {
+    "records": 1000,
+    "dimension": 64,
+    "synthetic": true,
+    "geometry": "identical graph snapshot",
+    "before": "git 90fe59c original renderer",
+    "viewport": "1500x1000",
+    "zoom": 2,
+    "depth": 8,
+    "spheres": true
+  },
+  "browser": "154.0.4258.37",
+  "results": [
+    {
+      "mode": "baseline",
+      "runs": [
+        {
+          "visible": 1273,
+          "nodes": 1273,
+          "frameMedianMs": 18.299999999999955,
+          "frameP95Ms": 24.300000000000182,
+          "drawMedianMs": 19.099999964237213,
+          "drawP95Ms": 20
+        },
+        {
+          "visible": 1273,
+          "nodes": 1273,
+          "frameMedianMs": 18.200000000000728,
+          "frameP95Ms": 24.300000000000182,
+          "drawMedianMs": 18.899999976158142,
+          "drawP95Ms": 19.5
+        },
+        {
+          "visible": 1273,
+          "nodes": 1273,
+          "frameMedianMs": 18.200000000000728,
+          "frameP95Ms": 24.300000000000182,
+          "drawMedianMs": 18,
+          "drawP95Ms": 19.099999964237213
+        }
+      ]
+    },
+    {
+      "mode": "after",
+      "runs": [
+        {
+          "visible": 594,
+          "nodes": 1273,
+          "frameMedianMs": 6.099999999999909,
+          "frameP95Ms": 6.199999999999818,
+          "drawMedianMs": 2.400000035762787,
+          "drawP95Ms": 3.199999988079071
+        },
+        {
+          "visible": 594,
+          "nodes": 1273,
+          "frameMedianMs": 6.099999999999909,
+          "frameP95Ms": 6.199999999999818,
+          "drawMedianMs": 2.400000035762787,
+          "drawP95Ms": 2.800000011920929
+        },
+        {
+          "visible": 594,
+          "nodes": 1273,
+          "frameMedianMs": 6.099999999999909,
+          "frameP95Ms": 6.200000000000273,
+          "drawMedianMs": 2.400000035762787,
+          "drawP95Ms": 3
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

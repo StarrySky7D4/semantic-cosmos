@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "near": {
+    "draws": 30,
+    "medianMs": 36.39999999999998,
+    "visible": 123
+  },
+  "far": {
+    "draws": 10,
+    "medianMs": 103,
+    "visible": 50
+  },
+  "picking": {
+    "id": "n-30",
+    "movedPixels": 4.964170167191795,
+    "actualPointerClick": true
+  },
+  "video": {
+    "width": 1030,
+    "height": 914,
+    "decodedFrames": 14,
+    "playbackSeconds": 0.555331
+  },
+  "errors": [],
+  "runnerPid": 25348,
+  "localPort": 4205,
+  "keepOpen": true
+}

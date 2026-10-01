@@ -1,0 +1,15 @@
+{
+  "mode": "baseline",
+  "readyMs": 230,
+  "frameMedianMs": 6.099999999999909,
+  "frameP95Ms": 6.2000000000000455,
+  "errors": [],
+  "browser": "154.0.4258.37",
+  "htmlBytes": 495419,
+  "appBytes": 34704,
+  "graph": {
+    "records": 29,
+    "nodes": 50,
+    "rendered": 38
+  }
+}

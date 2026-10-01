@@ -1,0 +1,65 @@
+{
+  "mode": "baseline",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "seed": 42,
+  "runs": 3,
+  "rows": [
+    {
+      "n": 29,
+      "dimension": 512,
+      "synthetic": false,
+      "medianMs": 48.7649,
+      "runsMs": [
+        74.4178,
+        48.7649,
+        47.7499
+      ],
+      "nodes": 50,
+      "edges": 123,
+      "algorithm": "rust-wasm"
+    },
+    {
+      "n": 100,
+      "dimension": 64,
+      "synthetic": true,
+      "medianMs": 372.44949999999994,
+      "runsMs": [
+        460.8719,
+        370.43989999999997,
+        372.44949999999994
+      ],
+      "nodes": 180,
+      "edges": 442,
+      "algorithm": "rust-wasm"
+    },
+    {
+      "n": 200,
+      "dimension": 64,
+      "synthetic": true,
+      "medianMs": 498.29150000000004,
+      "runsMs": [
+        498.29150000000004,
+        550.9460000000001,
+        487.90740000000005
+      ],
+      "nodes": 338,
+      "edges": 908,
+      "algorithm": "rust-wasm"
+    },
+    {
+      "n": 400,
+      "dimension": 64,
+      "synthetic": true,
+      "medianMs": 503.55690000000004,
+      "runsMs": [
+        499.2530999999999,
+        525.422,
+        503.55690000000004
+      ],
+      "nodes": 554,
+      "edges": 1746,
+      "algorithm": "rust-wasm"
+    }
+  ]
+}

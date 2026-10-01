@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "browser": "154.0.4258.37",
+  "checks": [
+    "73 IDs, precomputed startup without vectors/WASM/compute Worker",
+    "all nine vendor filters including compound labels",
+    "Chinese search navigates and fetches source shard with dates/evidence/limitations",
+    "text toggle, zoom selection and evidence satellites",
+    "hydration aligns vectors, complete sources and deduplicated lazy edges",
+    "FP32 C-order/FP64 Fortran NPY import and original 29-record schema-v1 graph compatibility",
+    "portable JSON export/import and IndexedDB restore; single Chinese record",
+    "empty, duplicate ID and zero vectors rejected while preserving workspace",
+    "duplicate content with distinct IDs retained",
+    "real ONNX inference matches 73 reference rows and warm cache computes zero rows",
+    "halfyear filter and cached catalogue/shards/vectors offline reload",
+    "1000-record catalogue fetches a strict subset of shards, no vectors, and loads searched document",
+    "1k under 4x CPU throttle and 10k synthetic import/render/search with <=600 visible nodes",
+    "390px mobile layout, <=240 visible nodes, pointer cancel and zoom controls",
+    "standalone file precomputed view, WASM reconstruction and HTTP inference guidance"
+  ],
+  "maxReferenceBrowserCosineDeviation": 9.468217727626183e-7,
+  "embeddingColdMs": 5310.199999988079,
+  "stress": [
+    {
+      "n": 1000,
+      "synthetic": true,
+      "dimension": 64,
+      "cpuThrottle": 4,
+      "importMs": 255,
+      "visible": 594,
+      "frameMedianMs": 18.199999999999818,
+      "frameP95Ms": 18.300000000000182,
+      "drawMedianMs": 12.099999964237213,
+      "drawP95Ms": 13.699999988079071
+    },
+    {
+      "n": 10000,
+      "synthetic": true,
+      "dimension": 64,
+      "cpuThrottle": 1,
+      "importMs": 488,
+      "visible": 594,
+      "frameMedianMs": 6.099999999999909,
+      "frameP95Ms": 6.199999999999818,
+      "drawMedianMs": 2.899999976158142,
+      "drawP95Ms": 3.800000011920929
+    }
+  ],
+  "errors": [],
+  "externalRequests": 0
+}

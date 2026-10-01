@@ -1,5 +1,6 @@
 import {applyThemeSpace,distance,SPACE_SCALE} from './space.js';
 import {dot} from './math.js';
+import {constructHierarchy} from './hierarchy.js';
 export {dot,unit,add,scale,cross,clamp,random} from './math.js';
 function majority(indices,records,key,fallback){const counts=new Map();indices.forEach(i=>{const s=records[i][key];if(s)counts.set(s,(counts.get(s)||0)+1)});return [...counts].sort((a,b)=>b[1]-a[1])[0]?.[0]||fallback}
 function protectedGroups(tree,V,p){
@@ -9,6 +10,7 @@ function protectedGroups(tree,V,p){
 }
 export function construct(data,p,kernel){
  p={relevance_floor:.45,max_worm_length:.65,density:.8,...p};
+ if(data.records.length===1||data.records.length>400||p.scalable)return constructHierarchy(data,p);
  kernel.initialize(data.vectors);
  const {records:R,vectors:V}=data,k=Math.min(p.k_roots,R.length),bins=kernel.cluster(k),nodes=[],edges=[],roots=[],leafOf=Array(R.length);let serial=0;
  const make=(kind,label,members,parent,root,depth,pos,score)=>{let n={id:'n-'+serial++,kind,label,members:members.map(i=>R[i].id),memberIndices:members,children:[],parent,root,depth,pos,score:score??null};nodes.push(n);return n};

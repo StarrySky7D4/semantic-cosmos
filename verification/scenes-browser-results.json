@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "baseline": "87fef11",
+  "checks": [
+    "universe keeps galaxy main layer plus bounded adjacent geometry; no document, vectors or embedding Worker fetched",
+    "single click opens range card without navigation; close preserves camera; double click has no card flash; gas range hit works away from its center; optional direct systems exist",
+    "cross-range Chinese search enters document system; event card has dates/evidence/precise source link; reading freezes local orbit; source scope contains only satellites; source double click cannot create empty level; semantic export unchanged",
+    "pointer-anchored wheel zoom enters the target, small reverse wheel does not oscillate, zoom out restores parent concepts; no selected event injected into overview",
+    "10k scene geometry stays bounded for visible adjacent layers and the searched route; one document shard and no vectors",
+    "390px touch card and enter action, responsive breadcrumb, reduced motion, 10k under 4x CPU throttle",
+    "all 73 actual CPU/hardware-WebGPU vectors remain aligned, semantic layout uncollapsed and both navigate to the same document scene; actual GPU queue submissions required"
+  ],
+  "performance": [
+    {
+      "phase": "before",
+      "n": 1000,
+      "synthetic": true,
+      "seed": 42,
+      "dimension": 64,
+      "workset": "87fef11 mixed global frontier",
+      "visible": 594,
+      "drawMedianMs": 3.5,
+      "drawP95Ms": 4.199999988079071,
+      "frameMedianMs": 6.099999999999909
+    },
+    {
+      "phase": "before",
+      "n": 10000,
+      "synthetic": true,
+      "seed": 42,
+      "dimension": 64,
+      "workset": "87fef11 mixed global frontier",
+      "visible": 594,
+      "drawMedianMs": 4.199999988079071,
+      "drawP95Ms": 6.5,
+      "frameMedianMs": 6.099999999999909
+    },
+    {
+      "phase": "after",
+      "n": 1000,
+      "synthetic": true,
+      "seed": 42,
+      "dimension": 64,
+      "workset": "current local system and event previews",
+      "visible": 6,
+      "drawMedianMs": 0.2999999523162842,
+      "drawP95Ms": 0.5,
+      "frameMedianMs": 6.099999999999909
+    },
+    {
+      "phase": "after",
+      "n": 10000,
+      "synthetic": true,
+      "seed": 42,
+      "dimension": 64,
+      "workset": "current local system and event previews",
+      "visible": 29,
+      "drawMedianMs": 0.699999988079071,
+      "drawP95Ms": 1.5999999642372131,
+      "frameMedianMs": 6.099999999999909
+    }
+  ],
+  "browser": "154.0.4258.37",
+  "recording": {
+    "method": "real Playwright full browser viewport, including HTML cards and breadcrumbs",
+    "width": 1600,
+    "height": 1000,
+    "bytes": 1337899,
+    "sequence": "universe → galaxy → gas range → system → event card → sources → zoom out to universe"
+  },
+  "lazy": {
+    "records": 10000,
+    "sceneGeometryFetched": 9,
+    "totalScopes": 1294,
+    "documentChunksFetched": 1,
+    "totalDocumentChunks": 313,
+    "overviewScenes": 8,
+    "compactSemanticIndex": "linear and retained",
+    "noVectors": true
+  },
+  "mobile": {
+    "records": 10000,
+    "synthetic": true,
+    "cpuThrottle": 4,
+    "visible": 29,
+    "drawMedianMs": 1.5,
+    "drawP95Ms": 2.199999988079071
+  },
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "isFallbackAdapter": false
+  },
+  "backends": [
+    {
+      "device": "wasm",
+      "embedding": {
+        "runtime": "onnxruntime-web/1.30.0",
+        "inferenceSchema": 2,
+        "batchSize": 1,
+        "gpuAdapter": null,
+        "model": "Xenova/bge-small-zh-v1.5",
+        "revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+        "weightDtype": "q8",
+        "vectorDtype": "fp32",
+        "pooling": "cls",
+        "dimension": 512,
+        "normalize": true,
+        "maxTokens": 512,
+        "inputTemplate": "title + 。 + summary",
+        "inputSha256": "b6fa4aa2fac6a6d45548e70b414d5f2aaf26969faa80f64e6ae53c1ddb010b04",
+        "backend": "wasm",
+        "generatedAt": "2026-10-01T04:28:24.320Z",
+        "durationMs": 4434.199999988079,
+        "reusedRows": 0,
+        "computedRows": 79,
+        "uniqueInputs": 79,
+        "gpuCommandSubmissions": 0
+      },
+      "nodes": 121,
+      "semanticRadiusMedian": 86.6445107890075
+    },
+    {
+      "device": "webgpu",
+      "embedding": {
+        "runtime": "onnxruntime-web/1.30.0",
+        "inferenceSchema": 2,
+        "batchSize": 1,
+        "gpuAdapter": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "isFallbackAdapter": false
+        },
+        "model": "Xenova/bge-small-zh-v1.5",
+        "revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+        "weightDtype": "q8",
+        "vectorDtype": "fp32",
+        "pooling": "cls",
+        "dimension": 512,
+        "normalize": true,
+        "maxTokens": 512,
+        "inputTemplate": "title + 。 + summary",
+        "inputSha256": "849f9308eb69264fc09cf29c9411524242b4b2ab388cb2c3302f38eaba92882f",
+        "backend": "webgpu",
+        "generatedAt": "2026-10-01T04:28:37.048Z",
+        "durationMs": 11350.099999964237,
+        "reusedRows": 0,
+        "computedRows": 79,
+        "uniqueInputs": 79,
+        "gpuCommandSubmissions": 4897
+      },
+      "nodes": 125,
+      "semanticRadiusMedian": 88.76405398626792
+    }
+  ],
+  "alignedCosine": {
+    "min": 0.9956418441603501,
+    "median": 0.9988745361552865
+  },
+  "errors": []
+}

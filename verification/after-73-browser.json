@@ -1,0 +1,15 @@
+{
+  "mode": "after-73",
+  "readyMs": 119,
+  "frameMedianMs": 6.099999999999966,
+  "frameP95Ms": 6.199999999999932,
+  "errors": [],
+  "browser": "154.0.4258.37",
+  "htmlBytes": 107401,
+  "appBytes": 41437,
+  "graph": {
+    "records": 73,
+    "nodes": 123,
+    "rendered": 52
+  }
+}

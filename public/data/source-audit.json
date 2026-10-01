@@ -1,0 +1,716 @@
+{
+  "asOf": "2026-09-30",
+  "readEvents": [
+    {
+      "id": "2026-04-23-gpt55",
+      "sources": [
+        {
+          "title": "OpenAI · GPT-5.5 发布：编码、电脑操作与专业工作",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-04-23"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-09-gpt56",
+      "sources": [
+        {
+          "title": "OpenAI · GPT-5.6 产品族正式开放",
+          "url": "https://openai.com/index/gpt-5-6/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-07-09"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-03-gpt6-astra",
+      "sources": [
+        {
+          "title": "OpenAI · GPT-6 Astra：电脑操作与专业任务升级",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-03"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-22-gpt6-sol-luna",
+      "sources": [
+        {
+          "title": "OpenAI · GPT-6 Sol 与 Luna 扩展成本效率",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-22"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-29-gpt-61-sol",
+      "sources": [
+        {
+          "title": "OpenAI · GPT-6.1 Sol：接近 Astra 的部分任务能力",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-29"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-08-openai-hf-incident",
+      "sources": [
+        {
+          "title": "OpenAI 持续更新的事件报告",
+          "url": "https://openai.com/hugging-face-incident-and-misalignment/",
+          "evidence_category": "官方确认",
+          "published_date": null
+        },
+        {
+          "title": "METR / Redwood 独立调查",
+          "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+          "evidence_category": "独立测试",
+          "published_date": "2026-08-26"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-04-16-opus47",
+      "sources": [
+        {
+          "title": "Anthropic · Opus 4.7：视觉、工程与 tokenizer 迁移",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "evidence_category": "官方确认",
+          "published_date": "2026-04-16"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-05-28-opus48",
+      "sources": [
+        {
+          "title": "Anthropic · Opus 4.8 改进协作与工具效率",
+          "url": "https://www.anthropic.com/news/claude-opus-4-8",
+          "evidence_category": "官方确认",
+          "published_date": "2026-05-28"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-06-09-fable-mythos5",
+      "sources": [
+        {
+          "title": "Anthropic · Fable 5 与 Mythos 5：相同底模、不同防护",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "evidence_category": "官方确认",
+          "published_date": "2026-06-09"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-24-opus5",
+      "sources": [
+        {
+          "title": "Anthropic · Opus 5：更高效的日常旗舰",
+          "url": "https://www.anthropic.com/news/claude-opus-5",
+          "evidence_category": "官方确认",
+          "published_date": "2026-07-24"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-01-claude-fable-mythos-51",
+      "sources": [
+        {
+          "title": "Anthropic · Fable / Mythos 5.1 更新防护与缓存成本",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-01"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-22-claude-opus-55",
+      "sources": [
+        {
+          "title": "Anthropic · Opus 5.5：能力、任务成本与对齐升级",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-22"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-28-claude-sonnet-55",
+      "sources": [
+        {
+          "title": "Anthropic · Sonnet 5.5：日常任务更快、更省 token",
+          "url": "https://www.anthropic.com/claude-sonnet-5-5",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-28"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-08-07-fable-bio",
+      "sources": [
+        {
+          "title": "Anthropic · Fable 5 调整生物防护误拦与模型回退",
+          "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+          "evidence_category": "官方确认",
+          "published_date": "2026-08-07"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-09-anthropic-assessment",
+      "sources": [
+        {
+          "title": "Anthropic · Anthropic 发布四次网络事件对齐评估",
+          "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-09"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-25-aisi-evaluation",
+      "sources": [
+        {
+          "title": "UK AISI 自身测试事件报告",
+          "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+          "evidence_category": "独立测试",
+          "published_date": null
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-05-19-gemini35",
+      "sources": [
+        {
+          "title": "Google · Gemini 3.5 首发 Flash",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-05-19"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-21-gemini36",
+      "sources": [
+        {
+          "title": "Google · Gemini Flash 产品线更新",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-07-21"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-02-gemini-38-flash",
+      "sources": [
+        {
+          "title": "Google · Gemini 3.8 Flash 与受限 Cyber",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-02"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-30-gemini4-argon",
+      "sources": [
+        {
+          "title": "Google · Gemini 4 Argon：可信网络防御伙伴分阶段开放",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-30"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "gemini38-cost-evaluation",
+      "sources": [
+        {
+          "title": "Artificial Analysis 自行测量",
+          "url": "https://artificialanalysis.ai/articles/gemini-3-8-flash",
+          "evidence_category": "独立测试",
+          "published_date": null
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "gemini38-geography-test",
+      "sources": [
+        {
+          "title": "GDELT 原始实验与输出",
+          "url": "https://blog.gdeltproject.org/experiments-with-detecting-correcting-ai-hallucination-in-geographic-mapping-testing-gemini-3-8-flash/",
+          "evidence_category": "独立测试",
+          "published_date": null
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-04-08-muse",
+      "sources": [
+        {
+          "title": "Meta · Muse Spark：原生多模态与工具使用",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-04-08"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-09-muse11",
+      "sources": [
+        {
+          "title": "Meta · Muse Spark 1.1 与 Meta Model API 公测",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-07-09"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-08-05-muse12",
+      "sources": [
+        {
+          "title": "Meta · Muse Code beta 与 Spark 1.2",
+          "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+          "evidence_category": "官方确认",
+          "published_date": "2026-08-05"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-02-muse13",
+      "sources": [
+        {
+          "title": "Meta · Muse Spark 1.3：长程协作与指令保持",
+          "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-02"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-meta-test-misconfiguration",
+      "sources": [
+        {
+          "title": "Meta 官方复盘",
+          "url": "https://research.meta.ai/blog/addressing-third-party-testing-misconfiguration-muse-spark-1-1",
+          "evidence_category": "官方确认",
+          "published_date": "2026-08-14"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-04-08-muse-awareness",
+      "sources": [
+        {
+          "title": "Meta · Muse Spark 评测意识与后续评测 bug 修正",
+          "url": "https://ai.meta.com/static-resource/muse-spark-safety-and-preparedness-report/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-04-08"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-16-grok45",
+      "sources": [
+        {
+          "title": "xAI / SpaceXAI · Grok 4.5：编码与知识工作",
+          "url": "https://x.ai/news/grok-4-5",
+          "evidence_category": "官方确认",
+          "published_date": "2026-07-16"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-08-12-grok46",
+      "sources": [
+        {
+          "title": "xAI / SpaceXAI · Grok 4.6：长程 Agent 与视觉交互",
+          "url": "https://x.ai/news/grok-4-6",
+          "evidence_category": "官方确认",
+          "published_date": "2026-08-12"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-21-grok-47",
+      "sources": [
+        {
+          "title": "xAI / SpaceXAI · Grok 4.7：更长任务与新的防护栈",
+          "url": "https://x.ai/news/grok-4-7",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-21"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "grok47-independent-eval",
+      "sources": [
+        {
+          "title": "Artificial Analysis 自行评测",
+          "url": "https://artificialanalysis.ai/articles/benchmarking-grok-4-7",
+          "evidence_category": "独立测试",
+          "published_date": null
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-04-24-deepseekv4",
+      "sources": [
+        {
+          "title": "DeepSeek 官方模型卡",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+          "evidence_category": "官方确认",
+          "published_date": null
+        },
+        {
+          "title": "DeepSeek 4 月 24 日更新日志",
+          "url": "https://api-docs.deepseek.com/updates/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-04-24"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-31-deepseekflash",
+      "sources": [
+        {
+          "title": "DeepSeek · V4 Flash API 后训练更新",
+          "url": "https://api-docs.deepseek.com/updates/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-07-31"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-08-13-deepseekpro",
+      "sources": [
+        {
+          "title": "DeepSeek · V4 Pro 正式更新与推理档位",
+          "url": "https://api-docs.deepseek.com/updates/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-08-13"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-10-deepseek-v41-flash",
+      "sources": [
+        {
+          "title": "V4.1 官方模型卡",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "evidence_category": "官方确认",
+          "published_date": null
+        },
+        {
+          "title": "9 月 10 日官方变更日志",
+          "url": "https://api-docs.deepseek.com/updates/",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-10"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-04-16-qwen36",
+      "sources": [
+        {
+          "title": "Qwen / Alibaba · Qwen3.6 中小模型更新",
+          "url": "https://github.com/QwenLM/Qwen3.8",
+          "evidence_category": "官方确认",
+          "published_date": "2026-04-16"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-05-19-qwen37",
+      "sources": [
+        {
+          "title": "Qwen / Alibaba · Qwen3.7 Max 面向 Agent 工作流",
+          "url": "https://qwen.ai/blog?id=qwen3.7",
+          "evidence_category": "官方确认",
+          "published_date": "2026-05-19"
+        }
+      ],
+      "verification_status": "official-search-excerpt"
+    },
+    {
+      "id": "2026-08-12-qwen38",
+      "sources": [
+        {
+          "title": "官方仓库发布日期",
+          "url": "https://github.com/QwenLM/Qwen3.8",
+          "evidence_category": "官方确认",
+          "published_date": "2026-08-12"
+        },
+        {
+          "title": "官方 2.4T-A95B 模型卡",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+          "evidence_category": "官方确认",
+          "published_date": null
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-08-19-qwen38-empty",
+      "sources": [
+        {
+          "title": "社区问题及 8 月 27 日修订",
+          "url": "https://github.com/QwenLM/Qwen3.8/issues/216",
+          "evidence_category": "用户报告",
+          "published_date": "2026-08-19"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "qwen38-flash-license",
+      "sources": [
+        {
+          "title": "官方权重 LICENSE 原文",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/LICENSE",
+          "evidence_category": "官方确认",
+          "published_date": null
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-06-16-glm52",
+      "sources": [
+        {
+          "title": "Z.ai / GLM · GLM-5.2：百万上下文与长程工作",
+          "url": "https://z.ai/blog/glm-5.2",
+          "evidence_category": "官方确认",
+          "published_date": "2026-06-16"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-08-14-glm53",
+      "sources": [
+        {
+          "title": "Z.ai / GLM · GLM-5.3：后训练扩展与网络能力",
+          "url": "https://z.ai/blog/glm-5.3",
+          "evidence_category": "官方确认",
+          "published_date": "2026-08-14"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-08-26-glm53flash",
+      "sources": [
+        {
+          "title": "Z.ai / GLM · GLM-5.3 Flash：原生多模态与混合注意力",
+          "url": "https://z.ai/blog/glm-5.3-flash",
+          "evidence_category": "官方确认",
+          "published_date": "2026-08-26"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-04-30-glm-cache",
+      "sources": [
+        {
+          "title": "Z.ai / GLM · 官方复盘：高并发长上下文的 KV 缓存竞态",
+          "url": "https://z.ai/blog/scaling-pain",
+          "evidence_category": "官方确认",
+          "published_date": "2026-04-30"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-06-glm-mtp-correction",
+      "sources": [
+        {
+          "title": "原始问题",
+          "url": "https://github.com/vllm-project/vllm/issues/55605",
+          "evidence_category": "用户报告",
+          "published_date": "2026-09-06"
+        },
+        {
+          "title": "作者纠正（GitHub API 同一线程）",
+          "url": "https://api.github.com/repos/vllm-project/vllm/issues/55605/comments",
+          "evidence_category": "用户报告",
+          "published_date": "2026-09-07"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-04-20-kimi26",
+      "sources": [
+        {
+          "title": "Moonshot / Kimi · Kimi K2.6：长程编码与 Agent Swarm",
+          "url": "https://www.kimi.com/en/help/agent/agent-overview",
+          "evidence_category": "官方确认",
+          "published_date": "2026-04-20"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-16-kimi3",
+      "sources": [
+        {
+          "title": "K3 官方仓库",
+          "url": "https://github.com/MoonshotAI/Kimi-K3",
+          "evidence_category": "官方确认",
+          "published_date": null
+        },
+        {
+          "title": "官方产品演进日期",
+          "url": "https://www.kimi.com/en/help/agent/agent-overview",
+          "evidence_category": "官方确认",
+          "published_date": null
+        },
+        {
+          "title": "K3 权重许可",
+          "url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/LICENSE",
+          "evidence_category": "官方确认",
+          "published_date": null
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-07-28-kimi3-tool-loop",
+      "sources": [
+        {
+          "title": "社区问题与日志说明",
+          "url": "https://github.com/MoonshotAI/Kimi-K3/issues/12",
+          "evidence_category": "用户报告",
+          "published_date": "2026-07-28"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "kimi-vendor-verifier-background",
+      "sources": [
+        {
+          "title": "Moonshot / Kimi · KVV：区分模型能力和推理实现偏差",
+          "url": "https://www.kimi.com/en/blog/kimi-vendor-verifier",
+          "evidence_category": "官方确认",
+          "published_date": null
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-07-aa-v43",
+      "sources": [
+        {
+          "title": "Artificial Analysis 方法变更原文",
+          "url": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-3",
+          "evidence_category": "独立测试",
+          "published_date": "2026-09-07"
+        }
+      ],
+      "verification_status": "source-read"
+    },
+    {
+      "id": "2026-09-11-grok47-early-stop",
+      "sources": [
+        {
+          "title": "xAI / SpaceXAI · 负责人承认难题过早放弃，RL 原因仍是猜测",
+          "url": "https://x.com/elonmusk/status/2098462085973741960",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-11"
+        }
+      ],
+      "verification_status": "official-search-excerpt"
+    },
+    {
+      "id": "2026-09-02-qwen38-max",
+      "sources": [
+        {
+          "title": "Qwen / Alibaba · Qwen3.8 Max 0902 官方服务升级",
+          "url": "https://x.com/Alibaba_Qwen/status/2094968708288680276",
+          "evidence_category": "官方确认",
+          "published_date": "2026-09-02"
+        }
+      ],
+      "verification_status": "official-search-excerpt"
+    }
+  ],
+  "unresolved": [
+    {
+      "url": "https://x.com/deepseek_ai/status/2097930608790167907",
+      "reason": "X 正文不可读；相同架构发布以完整模型卡及官方更新日志验证，不增加重复记录。"
+    }
+  ],
+  "partial": [
+    {
+      "url": "https://x.com/elonmusk/status/2098462085973741960",
+      "status": "official-search-excerpt",
+      "usedIn": "2026-09-11-grok47-early-stop",
+      "limitation": "官方账号索引摘要可读，正文无法完整获取；RL 根因仍为原作者猜测。"
+    },
+    {
+      "url": "https://x.com/Alibaba_Qwen/status/2094968708288680276",
+      "status": "official-search-excerpt",
+      "usedIn": "2026-09-02-qwen38-max",
+      "limitation": "仅采用官方索引简介，不扩写性能、价格。"
+    },
+    {
+      "url": "https://x.com/OpenAI/status/2103566736356458911",
+      "status": "official-search-excerpt",
+      "usedIn": "2026-07-08-openai-hf-incident",
+      "limitation": "同一事件以官方完整报告和 METR 为主要来源，不新增一条重复事件。"
+    },
+    {
+      "url": "https://qwen.ai/blog?id=qwen3.7",
+      "status": "official-search-excerpt",
+      "usedIn": "2026-05-19-qwen37",
+      "limitation": "公告日期及简介来自官方索引；浏览器正文未呈现。"
+    }
+  ],
+  "datePolicy": "event_date 与 published_date 分开；未知为 null，月份精度保留 YYYY-MM。持续更新报告逐来源记录日期，不猜发布日期。"
+}

@@ -1,0 +1,155 @@
+{
+  "baseline": "b7fb1b7",
+  "status": "PASS",
+  "checks": [
+    "73 true secondary star single-click aggregate card, double-click correct scope chain, local motion, galaxy adjacent entities, zoom hysteresis and unchanged semantic export",
+    "73 real / 1k and 10k synthetic: exactly two interactive layers, all representatives are real immediate children, bounded budget and no third-layer recursion"
+  ],
+  "comparison": [
+    {
+      "phase": "before",
+      "n": 73,
+      "synthetic": false,
+      "scope": "universe",
+      "primary": 4,
+      "secondary": 0,
+      "entities": 0,
+      "total": 4,
+      "budget": 108,
+      "layers": [
+        1
+      ],
+      "geometry": 1,
+      "invalid": false,
+      "medianMs": 0.19999998807907104,
+      "p95Ms": 0.40000003576278687
+    },
+    {
+      "phase": "before",
+      "n": 1000,
+      "synthetic": true,
+      "scope": "universe",
+      "primary": 8,
+      "secondary": 0,
+      "entities": 0,
+      "total": 8,
+      "budget": 108,
+      "layers": [
+        1
+      ],
+      "geometry": 1,
+      "invalid": false,
+      "medianMs": 0.30000001192092896,
+      "p95Ms": 0.5
+    },
+    {
+      "phase": "before",
+      "n": 10000,
+      "synthetic": true,
+      "scope": "universe",
+      "primary": 8,
+      "secondary": 0,
+      "entities": 0,
+      "total": 8,
+      "budget": 108,
+      "layers": [
+        1
+      ],
+      "geometry": 1,
+      "invalid": false,
+      "medianMs": 0.30000001192092896,
+      "p95Ms": 0.5
+    },
+    {
+      "phase": "after",
+      "n": 73,
+      "synthetic": false,
+      "scope": "universe",
+      "primary": 4,
+      "secondary": 10,
+      "entities": 5,
+      "total": 14,
+      "budget": 108,
+      "layers": [
+        1,
+        2
+      ],
+      "geometry": 5,
+      "invalid": false,
+      "medianMs": 0.3999999761581421,
+      "p95Ms": 0.699999988079071
+    },
+    {
+      "phase": "after",
+      "n": 1000,
+      "synthetic": true,
+      "scope": "universe",
+      "primary": 8,
+      "secondary": 24,
+      "entities": 19,
+      "total": 32,
+      "budget": 108,
+      "layers": [
+        1,
+        2
+      ],
+      "geometry": 9,
+      "invalid": false,
+      "medianMs": 0.5,
+      "p95Ms": 1
+    },
+    {
+      "phase": "after",
+      "n": 10000,
+      "synthetic": true,
+      "scope": "universe",
+      "primary": 8,
+      "secondary": 24,
+      "entities": 8,
+      "total": 32,
+      "budget": 108,
+      "layers": [
+        1,
+        2
+      ],
+      "geometry": 9,
+      "invalid": false,
+      "medianMs": 0.699999988079071,
+      "p95Ms": 1.100000023841858
+    }
+  ],
+  "browser": "154.0.4258.37",
+  "galaxy": {
+    "scope": "galaxy",
+    "primary": 3,
+    "secondary": 8,
+    "entities": 9,
+    "total": 11,
+    "budget": 108,
+    "layers": [
+      1,
+      2
+    ],
+    "geometry": 10,
+    "invalid": false
+  },
+  "mobile": {
+    "scope": "universe",
+    "primary": 8,
+    "secondary": 24,
+    "entities": 9,
+    "total": 32,
+    "budget": 48,
+    "layers": [
+      1,
+      2
+    ],
+    "geometry": 9,
+    "invalid": false
+  },
+  "recording": {
+    "file": "semantic-cosmos-two-layers.webm",
+    "bytes": 1396484
+  },
+  "errors": []
+}

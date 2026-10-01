@@ -1,6 +1,6 @@
 {
   "name": "semantic-cosmos-pages",
-  "version": "0.4.0",
+  "version": "0.5.0-local",
   "private": true,
   "type": "module",
   "description": "Local-first semantic forest, Rust/WASM core, browser ONNX embeddings, GitHub Pages compatible",
@@ -10,12 +10,20 @@
     "embed:browser": "node scripts/embed-browser.cjs",
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
-    "test": "node tests/core.test.mjs",
-    "test:browser": "node tests/browser-test.cjs",
-    "check:pages": "node scripts/check-pages.mjs"
+    "test": "node scripts/run-tests.mjs",
+    "test:browser": "node tests/universe-browser.cjs",
+    "test:backends": "node tests/backends-browser.cjs",
+    "check:pages": "node scripts/check-pages.mjs",
+    "embed:halfyear": "node scripts/embed-halfyear.cjs",
+    "bench:hierarchy": "node scripts/benchmark.mjs after",
+    "test:orbits": "node tests/scenes-browser.cjs",
+    "test:scenes": "node tests/scenes-browser.cjs",
+    "test:two-layers": "node tests/two-layers-browser.cjs"
   },
   "dependencies": {
-    "@huggingface/transformers": "3.8.1"
+    "@huggingface/transformers": "3.8.1",
+    "onnxruntime-web": "1.30.0",
+    "onnxruntime-common": "1.30.0"
   },
   "devDependencies": {
     "esbuild": "0.25.12",

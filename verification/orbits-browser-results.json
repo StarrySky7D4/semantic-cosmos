@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "baseline": "f2ee556",
+  "checks": [
+    "real 73 planets move on multiple seeded 3D planes; exported semantic nodes unchanged",
+    "pause/resume, speed, reading freeze, search focus and true 3D source-satellite projection",
+    "390px mobile 10k synthetic <=240 nodes; reduced-motion defaults to static and permits explicit enable",
+    "controlled background lifecycle excludes hidden elapsed time; native desktop background transition has an explicit environment limitation",
+    "all 73 real CPU/hardware-WebGPU embeddings aligned; same 3D position projection path and GPU queue submissions verified"
+  ],
+  "performance": [
+    {
+      "phase": "before",
+      "n": 73,
+      "synthetic": false,
+      "mode": "f2ee556 static positions + camera rotation",
+      "visible": 123,
+      "drawMedianMs": 1.800000011920929,
+      "drawP95Ms": 2.199999988079071,
+      "renderIntervalMedianMs": 6.099999999999909,
+      "definitions": 0
+    },
+    {
+      "phase": "before",
+      "n": 1000,
+      "synthetic": true,
+      "mode": "f2ee556 static positions + camera rotation",
+      "visible": 594,
+      "drawMedianMs": 2.5,
+      "drawP95Ms": 3.399999976158142,
+      "renderIntervalMedianMs": 6.099999999999909,
+      "definitions": 0
+    },
+    {
+      "phase": "before",
+      "n": 10000,
+      "synthetic": true,
+      "mode": "f2ee556 static positions + camera rotation",
+      "visible": 594,
+      "drawMedianMs": 2.800000011920929,
+      "drawP95Ms": 3.300000011920929,
+      "renderIntervalMedianMs": 6.099999999999454,
+      "definitions": 0
+    },
+    {
+      "phase": "after",
+      "n": 73,
+      "synthetic": false,
+      "mode": "3D orbits + camera rotation",
+      "visible": 123,
+      "drawMedianMs": 2.100000023841858,
+      "drawP95Ms": 2.600000023841858,
+      "renderIntervalMedianMs": 6.099999999999909,
+      "definitions": 73
+    },
+    {
+      "phase": "after",
+      "n": 1000,
+      "synthetic": true,
+      "mode": "3D orbits + camera rotation",
+      "visible": 594,
+      "drawMedianMs": 3.100000023841858,
+      "drawP95Ms": 4.300000011920929,
+      "renderIntervalMedianMs": 6.099999999999909,
+      "definitions": 463
+    },
+    {
+      "phase": "after",
+      "n": 10000,
+      "synthetic": true,
+      "mode": "3D orbits + camera rotation",
+      "visible": 594,
+      "drawMedianMs": 3.400000035762787,
+      "drawP95Ms": 3.900000035762787,
+      "renderIntervalMedianMs": 6.099999999999454,
+      "definitions": 451
+    }
+  ],
+  "browser": "154.0.4258.37",
+  "recording": {
+    "type": "native canvas.captureStream + MediaRecorder",
+    "mime": "video/webm",
+    "captureFps": 20,
+    "bytes": 1671953
+  },
+  "lowPerformance": {
+    "n": 10000,
+    "synthetic": true,
+    "viewport": "390x844",
+    "cpuThrottle": 4,
+    "visible": 234,
+    "drawMedianMs": 9.5,
+    "drawP95Ms": 11.300000011920929,
+    "renderIntervalMedianMs": 54.5
+  },
+  "background": {
+    "method": "controlled DOM visibility/freeze/resume events",
+    "hiddenMs": 700,
+    "clockAdvanceSeconds": 0.10300000000000001,
+    "actualDesktopVisibility": "NOT VERIFIED: this Windows Edge environment reports document.hidden=false after owned-window minimization and emits no visibility/freeze events; CDP freeze of visible page does not suspend it"
+  },
+  "adapter": {
+    "vendor": "nvidia",
+    "architecture": "lovelace",
+    "isFallbackAdapter": false
+  },
+  "backends": [
+    {
+      "device": "wasm",
+      "embedding": {
+        "runtime": "onnxruntime-web/1.30.0",
+        "inferenceSchema": 2,
+        "batchSize": 1,
+        "gpuAdapter": null,
+        "model": "Xenova/bge-small-zh-v1.5",
+        "revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+        "weightDtype": "q8",
+        "vectorDtype": "fp32",
+        "pooling": "cls",
+        "dimension": 512,
+        "normalize": true,
+        "maxTokens": 512,
+        "inputTemplate": "title + 。 + summary",
+        "inputSha256": "b6fa4aa2fac6a6d45548e70b414d5f2aaf26969faa80f64e6ae53c1ddb010b04",
+        "backend": "wasm",
+        "generatedAt": "2026-10-01T01:39:56.184Z",
+        "durationMs": 3685.400000035763,
+        "reusedRows": 0,
+        "computedRows": 79,
+        "uniqueInputs": 79,
+        "gpuCommandSubmissions": 0
+      },
+      "nodes": 121
+    },
+    {
+      "device": "webgpu",
+      "embedding": {
+        "runtime": "onnxruntime-web/1.30.0",
+        "inferenceSchema": 2,
+        "batchSize": 1,
+        "gpuAdapter": {
+          "vendor": "nvidia",
+          "architecture": "lovelace",
+          "isFallbackAdapter": false
+        },
+        "model": "Xenova/bge-small-zh-v1.5",
+        "revision": "75c43b069aac4d136ba6bc1122f995fedcfd2781",
+        "weightDtype": "q8",
+        "vectorDtype": "fp32",
+        "pooling": "cls",
+        "dimension": 512,
+        "normalize": true,
+        "maxTokens": 512,
+        "inputTemplate": "title + 。 + summary",
+        "inputSha256": "849f9308eb69264fc09cf29c9411524242b4b2ab388cb2c3302f38eaba92882f",
+        "backend": "webgpu",
+        "generatedAt": "2026-10-01T01:40:06.337Z",
+        "durationMs": 9152.300000011921,
+        "reusedRows": 0,
+        "computedRows": 79,
+        "uniqueInputs": 79,
+        "gpuCommandSubmissions": 4897
+      },
+      "nodes": 125
+    }
+  ],
+  "alignedCosine": {
+    "min": 0.9956418441603501,
+    "median": 0.9988745361552865
+  },
+  "errors": []
+}

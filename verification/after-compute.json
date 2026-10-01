@@ -1,0 +1,135 @@
+{
+  "mode": "after",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "seed": 42,
+  "runs": 3,
+  "rows": [
+    {
+      "n": 29,
+      "dimension": 512,
+      "synthetic": false,
+      "medianMs": 7.287500000000001,
+      "runsMs": [
+        17.2549,
+        7.287500000000001,
+        5.924999999999997
+      ],
+      "nodes": 41,
+      "edges": 90,
+      "algorithm": "bounded-hierarchy-js",
+      "hierarchy": {
+        "version": 2,
+        "leafCapacity": 32,
+        "comparisons": 292,
+        "maxLocalPairs": 15,
+        "globalPairMatrix": false
+      }
+    },
+    {
+      "n": 100,
+      "dimension": 64,
+      "synthetic": true,
+      "medianMs": 7.583999999999996,
+      "runsMs": [
+        7.583999999999996,
+        7.281199999999998,
+        10.731899999999996
+      ],
+      "nodes": 116,
+      "edges": 352,
+      "algorithm": "bounded-hierarchy-js",
+      "hierarchy": {
+        "version": 2,
+        "leafCapacity": 32,
+        "comparisons": 1774,
+        "maxLocalPairs": 253,
+        "globalPairMatrix": false
+      }
+    },
+    {
+      "n": 200,
+      "dimension": 64,
+      "synthetic": true,
+      "medianMs": 9.4208,
+      "runsMs": [
+        9.4208,
+        9.046099999999996,
+        9.486699999999999
+      ],
+      "nodes": 246,
+      "edges": 736,
+      "algorithm": "bounded-hierarchy-js",
+      "hierarchy": {
+        "version": 2,
+        "leafCapacity": 32,
+        "comparisons": 3749,
+        "maxLocalPairs": 406,
+        "globalPairMatrix": false
+      }
+    },
+    {
+      "n": 400,
+      "dimension": 64,
+      "synthetic": true,
+      "medianMs": 11.178000000000011,
+      "runsMs": [
+        11.178000000000011,
+        11.622500000000016,
+        10.050699999999978
+      ],
+      "nodes": 494,
+      "edges": 1454,
+      "algorithm": "bounded-hierarchy-js",
+      "hierarchy": {
+        "version": 2,
+        "leafCapacity": 32,
+        "comparisons": 9169,
+        "maxLocalPairs": 496,
+        "globalPairMatrix": false
+      }
+    },
+    {
+      "n": 1000,
+      "dimension": 64,
+      "synthetic": true,
+      "medianMs": 18.76049999999998,
+      "runsMs": [
+        17.994100000000003,
+        30.4101,
+        18.76049999999998
+      ],
+      "nodes": 1273,
+      "edges": 3702,
+      "algorithm": "bounded-hierarchy-js",
+      "hierarchy": {
+        "version": 2,
+        "leafCapacity": 32,
+        "comparisons": 22154,
+        "maxLocalPairs": 465,
+        "globalPairMatrix": false
+      }
+    },
+    {
+      "n": 10000,
+      "dimension": 64,
+      "synthetic": true,
+      "medianMs": 116.1343,
+      "runsMs": [
+        116.1343,
+        131.36379999999997,
+        106.12349999999992
+      ],
+      "nodes": 12697,
+      "edges": 37203,
+      "algorithm": "bounded-hierarchy-js",
+      "hierarchy": {
+        "version": 2,
+        "leafCapacity": 32,
+        "comparisons": 266577,
+        "maxLocalPairs": 496,
+        "globalPairMatrix": false
+      }
+    }
+  ]
+}
