@@ -13,8 +13,8 @@ export async function computeGraph(data,parameters){
   job.worker.postMessage({data,parameters,wasm:bytes.buffer},[bytes.buffer]);
  });
 }
-export function embedRecords(normalized,device,onProgress=()=>{}){
+export function embedRecords(normalized,device,onProgress=()=>{},{progressTimeout=false}={}){
  if(location.protocol==='file:')return Promise.reject(Error('重新嵌入需要 HTTP 环境：在源码包目录运行 npm run serve，或部署 dist 到 GitHub Pages。当前文件仍可离线重建已保存的向量。'));
  const base=new URL('../',import.meta.url),worker=new Worker(new URL('./inference.worker.js',import.meta.url),{type:'module'}),job=register(worker,null);
- return new Promise((resolve,reject)=>{const timer=setTimeout(()=>fail(Error('Model inference exceeded 180 seconds; cancel and retry.')),180000),finish=()=>{clearTimeout(timer);dispose(job)},fail=e=>{finish();reject(e)};job.reject=fail;worker.onerror=e=>fail(Error(e.message||'模型 Worker 启动失败'));worker.onmessage=e=>{if(e.data.type==='progress')onProgress(e.data.message);else if(e.data.type==='result'){finish();resolve(e.data.data)}else if(e.data.type==='error')fail(Error(e.data.message));};worker.postMessage({normalized,device,base:base.href});});
+ return new Promise((resolve,reject)=>{let timer;const arm=()=>{clearTimeout(timer);timer=setTimeout(()=>fail(Error(progressTimeout?'本地模型连续 180 秒无进度，已停止；已完成的行缓存保留，可重试。':'Model inference exceeded 180 seconds; cancel and retry.')),180000)},finish=()=>{clearTimeout(timer);dispose(job)},fail=e=>{finish();reject(e)};job.reject=fail;worker.onerror=e=>fail(Error(e.message||'模型 Worker 启动失败'));worker.onmessage=e=>{if(e.data.type==='progress'){if(progressTimeout)arm();onProgress(e.data.message);}else if(e.data.type==='result'){finish();resolve(e.data.data)}else if(e.data.type==='error')fail(Error(e.data.message));};arm();worker.postMessage({normalized,device,base:base.href});});
 }

@@ -144,3 +144,29 @@ npm run test:browser
 - ONNX Runtime：https://github.com/microsoft/onnxruntime （MIT）
 
 许可证文本保存在 `public/licenses/` 和 `dist/licenses/`。原始新闻 JSON 及其链接按用户提供内容保留。
+
+## 来源设置
+
+导入窗口保留原有单 JSON/NPY 与粘贴导入，新增“本地文件夹 / 多个 JSON”。目录选择会递归包含子目录中的 JSON；不支持目录的手机/浏览器可使用始终可见的多文件选择。先预览格式、记录数、大小、清单与错误，再导入勾选的文件。坏 JSON、未知结构和冲突会阻断导入；用户可取消勾选问题文件后重新预览。取消预览、取消文件选择、重选或切换来源不会覆盖当前图谱。
+
+支持匹配的实际结构（测试只使用同构合成数据）：
+
+- 日报 metadata + overview_cards / deep_dive_analysis / briefing_flash：三段都映射为文章；概览的原 ID/关键词/来源、深度分析的演变/各角色观点/长期影响、快讯来源均保留。generated_at 保留为生成时间，不充当发表或事件日期。
+- timestamp JSON 的 meta + items：数字 ID、title_en、summary、full_content、published、来源 name/url/retrieved 保留。全文参与文本展示和嵌入输入；原摘要另外保留。saved_at 只是文件保存时间。
+- AI 分片语料的 meta + items：id/type/title/summary/url/discussion_url/source/published/authors/points/num_comments/categories/language 保留；原文与讨论链接都映射为来源。part/part_count/offset/license_note 等文件元数据保留。
+- manifest 的 files[{file,count,bytes}]：识别为清单，不生成文章；核对已选文件、声明数量与字节数，未选/不符显示提示，实际记录不会按声明截断。
+- 原有 items、texts、字符串/对象数组、records+vectors 和 semantic-cosmos/v1 图谱。图谱只能单独导入，不能与其他数据集混合。未知 JSON 不猜测成文章。
+
+文件夹导入使用“相对文件路径 + 原 ID”命名空间，原 ID 另存 original_id；没有 ID 的记录使用内容 SHA-256。选择顺序或同文件无 ID 记录重排不影响 ID；文件移动/改名会改变路径命名空间。同一个 card_1 在不同日报文件中不会误合并。同文件内完全相同的记录去重并保留原始行号；同 ID 不同内容报错。JSON 内容完全相同的文件副本去重，保留副本路径。不同文件中的相似/相同文章不按标题猜测合并。手机多选同名文件但内容不同会阻断，需分批或选择可区分的子目录。来源元数据含相对路径、原文件 SHA-256、规范 JSON SHA-256、原 ID/行号与原文件 metadata；不保存磁盘绝对路径。文章卡片显示本地文件、原 ID、行号、作者和适用的许可说明，导出/本地快照保留这些字段。
+
+解析预算为最多 2000 个 JSON、所选 JSON 总计 40 MiB、合并后最多 20000 条文章，超限报错而非静默截断。预览单独显示预计 512 维 FP32 向量内存（12000 条约 23.44 MiB），并沿用 1024 万向量数值上限。完整原文保留，但实际 BGE 模型每条嵌入最多使用 512 tokens。原文大批导入时使用连续 180 秒无进度看门狗，有进度可继续；取消/超时后已完成的行缓存可复用。其他原有嵌入入口保留原 180 秒总时限。未修改模型、ONNX Runtime 1.30.0、Q8 缓存身份、单条 batch 或 CPU/WebGPU 标签逻辑。
+
+所有文件的预计算向量维度及模型配置一致时保留向量；每文件原始嵌入元数据另外保留，组合后的元数据不冒用单文件 inputSha256。无模型标注时提示用户确认同一向量空间；混合原文/向量或模型/后端/维度不同则明确提示重新嵌入全部原文。文件原有 themes/themeVectors 保存在各文件元数据中，未自动拼成新的跨文件主题坐标。场景、分层构图、懒加载和可见绘制预算沿用现有实现；大集合仍需实际设备性能验收。
+
+GitHub 功能保留：匿名验证公开仓库，支持仓库/tree/blob 链接与手动分支/标签，固定到提交后列出 JSON，用户选择一个文件实际读取验证。私有仓库不支持，API 限流/截断/HTTP/网络错误会明确显示，不使用示例数据冒充成功。
+
+Drive 按用户最新要求改为“自行下载到本地并解压，再选择文件夹/多个 JSON”的说明，默认链接仍指向指定文件夹。不直接连接 Drive、不申请 Google 外部权限、不加载 GIS、不创建凭据/OAuth/API key、不使用代理或抓取共享页面、不改变共享权限。此前 OAuth 接入方案已停止，Drive 直接网络读取不在当前实现范围内。
+
+读取、解析、嵌入和构图在浏览器中进行，不上传本地文件。用户主动保存工作区/导出时才按原有行为保存。构建只复制现有 public，未添加真实 Drive 内容。网页不能自动解压 ZIP，也不能递归读取未选择的位置；多文件后备没有浏览器未提供的子目录路径。
+
+验证：npm test（43 项）；node tests/local-import-browser.cjs（真实 CPU、目录/取消/混合格式/移动端后备、无 Google 请求）；node tests/sources-browser.cjs（真实公开 GitHub 读取）；npm run build；npm run check:pages。12000 条同构合成语料的完整解析通过，整套 12000 条真实 CPU/GPU 嵌入尚未运行，不能当作全规模性能验收。本次已获准通过既有 Pages 工作流发布应用改动；测试没有上传真实语料、截图、视频或历史 Git 数据库。main push 会触发 pages.yml。
